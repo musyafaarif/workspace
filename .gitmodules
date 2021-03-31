@@ -1,0 +1,4 @@
+[submodule "simulator"]
+	path = simulator
+	url = https://github.com/PX4/PX4-SITL_gazebo.git
+	branch = master
