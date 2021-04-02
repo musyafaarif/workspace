@@ -84,19 +84,25 @@ class SimCam():
         return Gst.FlowReturn.OK
 
 class Camera(object):
-    def __init__(self, src=None, port=None):
+    def __init__(self, src=None, port=None, res=(320, 240)):
         if src is None and port is None:
             print("Camera object not created!")
             Exception(self)
 
+        self.res = res
+        
         if not src is None:
-            self.cam = RealCam(src=src)
+            self.cam = RealCam(src=src, res=res)
         
         if not port is None:
             self.cam = SimCam(port)
 
     def capture(self):
-        return self.cam.capture()
+        frame = self.cam.capture()
+        if isinstance(self.cam, SimCam) and frame is not None:
+            return imutils.resize(frame, self.res[0], self.res[1])
+        else:
+            return frame
 
     def close(self):
         if isinstance(self.cam, RealCam):
