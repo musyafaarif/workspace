@@ -17,8 +17,25 @@ class ColorDetection(object):
         self.lo = np.array(lower_threshold)
         self.hi = np.array(upper_threshold)
 
+    def read(self):
+        return self._mask
+
     def update(self, frame):
         frame_hsv = convert2hsv(frame)
         mask = create_mask(None, frame_hsv, self.lo, self.hi)
-        mask_clean = cv.medianBlur(mask, 11)
-        return mask_clean
+        self._mask = cv.medianBlur(mask, 3)
+
+	    # calculate moments of binary image
+        M = cv.moments(self._mask)
+
+        self.has_centroid = M["m00"] != 0
+        if self.has_centroid:
+            # calculate x,y coordinate of center
+            cX = int(M["m10"] / M["m00"])
+            cY = int(M["m01"] / M["m00"])
+
+            self.centroid = (cX, cY)
+        else:
+            self.centroid = None
+
+        return self._mask
