@@ -1,6 +1,8 @@
 #!/bin/bash
 
 source setup/ubuntu.sh
+source setup/ros_gazebo.sh
+source setup/sim.sh
 
 DIR="$(dirname "$(realpath ${BASH_SOURCE[0]})")"
 SETUP_FILE="$DIR/catkin_ws/devel/setup.bash"
