@@ -1,16 +1,4 @@
-[submodule "PX4-Autopilot"]
-	path = firmware
-	url = https://github.com/musyafaarif/PX4-Autopilot.git
-	branch = pr-tugas_akhir
 [submodule "simulator"]
 	path = simulator
 	url = https://github.com/PX4/PX4-SITL_gazebo.git
 	branch = master
-[submodule "mavlink"]
-	path = catkin_ws/src/mavlink
-	url = https://github.com/musyafaarif/mavlink-gbp-release.git
-	branch = pr-tugas_akhir
-[submodule "mavros"]
-	path = catkin_ws/src/mavros
-	url = https://github.com/musyafaarif/mavros.git
-	branch = pr-tugas_akhir
