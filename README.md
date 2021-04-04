@@ -21,24 +21,24 @@ All notable changes to this project will be documented in this file.
 
 ## [Week 5] - 2021-04-06
 ### Added
-* Add PX4 Submodule
-- PX4 Firmware Submodule
-- PX4 Firmware Submodule Installation Script
-* Setting Up ROS Workspace
-- Mavlink Submodule
-- Mavros Submodule
-- Smart Vision Workspace
-- Autopilot Control Workspace
-- Catkin Workspace Sourcing Script
-* Setting Up Gazebo Simulation
-- PX4 SITL Submodule
-- PX4 SITL Submodule Installation Scripts
-- Landing Pad Model
-* Develop Smart Vision
-- Camera Streaming
-- GStreamer Streaming from UDP
-- Color Detection
-- Color Detection Manual Tuning
+- **Add PX4 Submodule**
+  - PX4 Firmware Submodule
+  - PX4 Firmware Submodule Installation Script
+- **Setting Up ROS Workspace**
+  - Mavlink Submodule
+  - Mavros Submodule
+  - Smart Vision Workspace
+  - Autopilot Control Workspace
+  - Catkin Workspace Sourcing Script
+- **Setting Up Gazebo Simulation**
+  - PX4 SITL Submodule
+  - PX4 SITL Submodule Installation Scripts
+  - Landing Pad Model
+- **Develop Smart Vision**
+  - Camera Streaming
+  - GStreamer Streaming from UDP
+  - Color Detection
+  - Color Detection Manual Tuning
 
 ### Changed
 
