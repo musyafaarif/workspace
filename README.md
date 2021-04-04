@@ -34,6 +34,7 @@ All notable changes to this project will be documented in this file.
   - PX4 SITL Submodule
   - PX4 SITL Submodule Installation Scripts
   - Landing Pad Model
+  - Boat Model
 - **Develop Smart Vision**
   - Camera Streaming
   - GStreamer Streaming from UDP
