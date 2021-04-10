@@ -13,3 +13,5 @@ export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:"$DIR/simulator/models":"$DIR/simu
 # export GAZEBO_MODEL_DATABASE_URI=""
 # Set path to sitl_gazebo repository
 export SITL_GAZEBO_PATH="$DIR/simulator":"$DIR/simulator_extras"
+
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$DIR/firmware
