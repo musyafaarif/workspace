@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="raspberry">
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.05</mass>
+        <inertia>
+          <ixx>1e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-05</iyy>
+          <iyz>0</iyz>
+          <izz>1e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="raspberry_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://raspberry/meshes/raspberry.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <!-- <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://raspberry/meshes/raspberry.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <shader type='pixel'>
+            <normal_map>__default__</normal_map>
+          </shader>
+          <!-- <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive> -->
+        </material> -->
+      </visual>
+      <collision name="raspberry_collison">
+        <pose>0 0 0.007 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.125 0.0811 0.014</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
