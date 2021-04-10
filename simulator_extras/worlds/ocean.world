@@ -46,16 +46,7 @@
       <direction>-0.3 -0.3 -1</direction>
       <cast_shadows>false</cast_shadows>
     </light>
-
-    <!-- Bounding box with sea surface -->
-    <include>
-      <uri>model://ocean</uri>
-      <pose>0 0 0 0 0 0</pose>
-    </include>
-    <include>
-      <uri>model://main_boat</uri>
-      <pose>0 0 0 0 0 0</pose>
-    </include>
+    
     <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>
       <ode>
@@ -77,6 +68,16 @@
       <real_time_update_rate>250</real_time_update_rate>
       <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
     </physics>
+
+    <!-- Bounding box with sea surface -->
+    <include>
+      <uri>model://ocean</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://main_boat</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
     <include>
       <uri>model://main_drone</uri>
       <pose>0 0 1.27 0 0 0</pose>
