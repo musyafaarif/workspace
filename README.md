@@ -29,6 +29,8 @@ All notable changes to this project will be documented in this file.
 ### Added
 - **Setting Up Gazebo Simulation**
   - Hexacopter Model
+- **Develop Control**
+  - Simple takeoff
 
 ## [Week 5] - 2021-04-06
 ### Added
