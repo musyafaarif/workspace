@@ -48,15 +48,19 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hexacopter_tarot680/meshes/tarot680.dae</uri>
+            <uri>model://hexacopter_tarot680/meshes/tarot680.stl</uri>
           </mesh>
         </geometry>
-        <!-- <material>
+        <material>
           <script>
-            <name>Gazebo/DarkGrey</name>
+            <name>Gazebo/Black</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-        </material> -->
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.15 0.15 0.15 1</diffuse>
+          <specular>0.7 0.7 0.7 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
       <gravity>1</gravity>
       <velocity_decay/>
@@ -99,7 +103,7 @@
     <!-- Front Right (CCW) -->
     <link name='rotor_4'>
       <!-- <pose>0.31 -0.1785 0.26 0 0 0</pose> -->
-      <pose>0.2966 -0.1712 0.26 0 0 0</pose>
+      <pose>0.2966 -0.1712 0.235 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -129,19 +133,28 @@
           </friction>
         </surface>
       </collision>
-      <visual name='rotor_4_visual'>
-        <pose>0 0 0 0 0 0</pose>
+      <visual name='prop_4_visual'>
+        <pose>0 0 0.03 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
             <uri>model://hexacopter_tarot680/meshes/1340_ccw.dae</uri>
           </mesh>
         </geometry>
+      </visual>
+      <visual name='rotor_4_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hexacopter_tarot680/meshes/motor.stl</uri>
+          </mesh>
+        </geometry>
         <material>
-          <script>
-            <name>Gazebo/Red</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+          <specular>1 1 1 1</specular>
+          <emissive>0 0 0 1</emissive>
         </material>
       </visual>
       <gravity>1</gravity>
@@ -167,7 +180,7 @@
     <!-- Front Left (CW) -->
     <link name='rotor_2'>
       <!-- <pose>0.31 0.1785 0.26 0 0 0</pose> -->
-      <pose>0.2966 0.1712 0.26 0 0 0</pose>
+      <pose>0.2966 0.1712 0.235 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -197,19 +210,28 @@
           </friction>
         </surface>
       </collision>
-      <visual name='rotor_2_visual'>
-        <pose>0 0 0 0 0 0</pose>
+      <visual name='prop_2_visual'>
+        <pose>0 0 0.03 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
             <uri>model://hexacopter_tarot680/meshes/1340_cw.dae</uri>
           </mesh>
         </geometry>
+      </visual>
+      <visual name='rotor_2_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hexacopter_tarot680/meshes/motor.stl</uri>
+          </mesh>
+        </geometry>
         <material>
-          <script>
-            <name>Gazebo/Red</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+          <specular>1 1 1 1</specular>
+          <emissive>0 0 0 1</emissive>
         </material>
       </visual>
       <gravity>1</gravity>
@@ -235,7 +257,7 @@
     <!-- Back Right (CCW) -->
     <link name='rotor_3'>
       <!-- <pose>-0.31 -0.1785 0.26 0 0 0</pose> -->
-      <pose>-0.2966 -0.1712 0.26 0 0 0</pose>
+      <pose>-0.2966 -0.1712 0.235 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -265,14 +287,29 @@
           </friction>
         </surface>
       </collision>
-      <visual name='rotor_3_visual'>
-        <pose>0 0 0 0 0 0</pose>
+      <visual name='prop_3_visual'>
+        <pose>0 0 0.03 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
             <uri>model://hexacopter_tarot680/meshes/1340_ccw.dae</uri>
           </mesh>
         </geometry>
+      </visual>
+      <visual name='rotor_3_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hexacopter_tarot680/meshes/motor.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+          <specular>1 1 1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
       <gravity>1</gravity>
       <velocity_decay/>
@@ -297,7 +334,7 @@
     <!-- Middle Right (CW) -->
     <link name='rotor_0'>
       <!-- <pose>0 -0.3435 0.26 0 0 0</pose> -->
-      <pose>0 -0.3425 0.26 0 0 0</pose>
+      <pose>0 -0.3425 0.235 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -327,14 +364,29 @@
           </friction>
         </surface>
       </collision>
-      <visual name='rotor_0_visual'>
-        <pose>0 0 0 0 0 0</pose>
+      <visual name='prop_0_visual'>
+        <pose>0 0 0.03 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
             <uri>model://hexacopter_tarot680/meshes/1340_cw.dae</uri>
           </mesh>
         </geometry>
+      </visual>
+      <visual name='rotor_0_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hexacopter_tarot680/meshes/motor.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+          <specular>1 1 1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
       <gravity>1</gravity>
       <velocity_decay/>
@@ -359,7 +411,7 @@
     <!-- Middle Left (CCW) -->
     <link name='rotor_1'>
       <!-- <pose>0 0.3435 0.26 0 0 0</pose> -->
-      <pose>0 0.3425 0.26 0 0 0</pose>
+      <pose>0 0.3425 0.235 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -389,14 +441,29 @@
           </friction>
         </surface>
       </collision>
-      <visual name='rotor_1_visual'>
-        <pose>0 0 0 0 0 0</pose>
+      <visual name='prop_1_visual'>
+        <pose>0 0 0.03 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
             <uri>model://hexacopter_tarot680/meshes/1340_ccw.dae</uri>
           </mesh>
         </geometry>
+      </visual>
+      <visual name='rotor_1_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hexacopter_tarot680/meshes/motor.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+          <specular>1 1 1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
       <gravity>1</gravity>
       <velocity_decay/>
@@ -421,7 +488,7 @@
     <!-- Back Left (CW) -->
     <link name='rotor_5'>
       <!-- <pose>-0.31 0.1785 0.26 0 0 0</pose> -->
-      <pose>-0.2966 0.1712 0.26 0 0 0</pose>
+      <pose>-0.2966 0.1712 0.235 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -451,14 +518,29 @@
           </friction>
         </surface>
       </collision>
-      <visual name='rotor_5_visual'>
-        <pose>0 0 0 0 0 0</pose>
+      <visual name='prop_5_visual'>
+        <pose>0 0 0.03 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
             <uri>model://hexacopter_tarot680/meshes/1340_cw.dae</uri>
           </mesh>
         </geometry>
+      </visual>
+      <visual name='rotor_5_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hexacopter_tarot680/meshes/motor.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+          <specular>1 1 1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
       <gravity>1</gravity>
       <velocity_decay/>

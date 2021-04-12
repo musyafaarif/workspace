@@ -22,6 +22,12 @@
             <uri>model://pixhawk2/meshes/pixhawk2.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>1 1 1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
       </visual>
       <collision name="pixhawk2_collison">
         <pose>0 0 0.0155 0 0 0</pose>
