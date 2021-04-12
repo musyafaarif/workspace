@@ -7,8 +7,6 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Added
-- **Setting Up Gazebo Simulation**
-  - Hexacopter Model
 
 ### Changed
 
@@ -24,6 +22,9 @@ All notable changes to this project will be documented in this file.
 ## [Week 8] - 2021-04-27
 ## [Week 7] - 2021-04-20
 ## [Week 6] - 2021-04-13
+### Added
+- **Setting Up Gazebo Simulation**
+  - Hexacopter Model
 
 ## [Week 5] - 2021-04-06
 ### Added
