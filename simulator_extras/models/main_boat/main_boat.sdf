@@ -262,7 +262,7 @@
           </mesh>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__left_battery_visual_visual_1'>
+      <!-- <visual name='base_link_fixed_joint_lump__left_battery_visual_visual_1'>
         <pose>0 -0.03 0 0 -0 0</pose>
         <geometry>
           <mesh>
@@ -291,7 +291,7 @@
             <uri>__default__</uri>
           </script>
         </material>
-      </visual>
+      </visual> -->
       <visual name='right_engine_link_visual'>
         <pose>-2.37378 -1.02713 0.318237 0 -0 0</pose>
         <geometry>
@@ -586,13 +586,6 @@
     <joint name="landing_pad_joint" type="fixed">
       <child>landing_pad::link</child>
       <parent>base_link</parent>
-      <axis>
-        <xyz>0 0 0</xyz>
-        <limit>
-          <upper>0</upper>
-          <lower>0</lower>
-        </limit>
-      </axis>
     </joint>
   </model>
 </sdf>
