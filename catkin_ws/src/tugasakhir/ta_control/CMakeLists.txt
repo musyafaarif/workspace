@@ -157,7 +157,17 @@ add_dependencies(testing ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_T
 # )
 target_link_libraries(testing
   ${catkin_LIBRARIES}
-  ncurses
+)
+
+add_executable(simple_takeoff
+  src/simple_takeoff.cpp
+)
+add_dependencies(simple_takeoff
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+  ${catkin_EXPORTED_TARGETS}
+)
+target_link_libraries(simple_takeoff
+  ${catkin_LIBRARIES}
 )
 
 #############
