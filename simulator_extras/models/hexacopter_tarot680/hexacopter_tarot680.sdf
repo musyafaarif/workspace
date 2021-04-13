@@ -132,6 +132,12 @@
             <uri>model://hexacopter_tarot680/meshes/1340_ccw.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.5 0.1 0.1 1</diffuse>
+          <specular>1 0.6 0.6 1</specular>
+          <emissive>0.5 0 0 1</emissive>
+        </material>
       </visual>
       <visual name='rotor_4_visual'>
         <pose>0 0 0 0 0 0</pose>
@@ -143,9 +149,9 @@
         </geometry>
         <material>
           <ambient>0 0 0 1</ambient>
-          <diffuse>0.1 0.1 0.1 1</diffuse>
-          <specular>1 1 1 1</specular>
-          <emissive>0 0 0 1</emissive>
+          <diffuse>0.5 0.1 0.1 1</diffuse>
+          <specular>1 0.6 0.6 1</specular>
+          <emissive>0.5 0 0 1</emissive>
         </material>
       </visual>
       <gravity>1</gravity>
@@ -209,6 +215,12 @@
             <uri>model://hexacopter_tarot680/meshes/1340_cw.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.5 0.1 0.1 1</diffuse>
+          <specular>1 0.6 0.6 1</specular>
+          <emissive>0.5 0 0 1</emissive>
+        </material>
       </visual>
       <visual name='rotor_2_visual'>
         <pose>0 0 0 0 0 0</pose>
@@ -220,9 +232,9 @@
         </geometry>
         <material>
           <ambient>0 0 0 1</ambient>
-          <diffuse>0.1 0.1 0.1 1</diffuse>
-          <specular>1 1 1 1</specular>
-          <emissive>0 0 0 1</emissive>
+          <diffuse>0.5 0.1 0.1 1</diffuse>
+          <specular>1 0.6 0.6 1</specular>
+          <emissive>0.5 0 0 1</emissive>
         </material>
       </visual>
       <gravity>1</gravity>

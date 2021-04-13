@@ -21,7 +21,6 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - **Fixing Gazebo Configuration**
-  - Hexacopter Model
   - Boat Model
   - World Model
   - World Map Coordinate
@@ -35,6 +34,10 @@ All notable changes to this project will be documented in this file.
 ## [Week 9] - 2021-05-04
 ## [Week 8] - 2021-04-27
 ## [Week 7] - 2021-04-20
+### Fixed
+- **Fixing Gazebo Configuration**
+  - Hexacopter Model
+
 ## [Week 6] - 2021-04-13
 ### Added
 - **Setting Up Gazebo Simulation**
