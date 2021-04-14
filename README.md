@@ -11,6 +11,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Added
+- **Develop Extended Kalman Filter**
+  - Basic Kalman Filter
+
 ### Changed
 ### Fixed
 
