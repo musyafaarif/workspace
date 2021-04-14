@@ -47,6 +47,33 @@
       <cast_shadows>false</cast_shadows>
     </light>
     
+    <!-- Bounding box with sea surface -->
+    <include>
+      <uri>model://ocean</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://main_boat</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://main_drone</uri>
+      <pose>0 0 1.27 0 0 0</pose>
+    </include>
+    
+    <plugin name='wind_plugin' filename='libgazebo_wind_plugin.so'>
+      <frameId>base_link</frameId>
+      <robotNamespace/>
+      <xyzOffset>1 0 0</xyzOffset>
+      <windDirectionMean>0 1 0</windDirectionMean>
+      <windDirectionVariance>0.01</windDirectionVariance>
+      <!-- From Wind Speed at 50m -->
+      <windVelocityMean>4.0</windVelocityMean>
+      <windVelocityMax>5.25</windVelocityMax>
+      <windVelocityVariance>4.0</windVelocityVariance>
+      <windPubTopic>world_wind</windPubTopic>
+    </plugin>
+
     <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>
       <ode>
@@ -68,19 +95,5 @@
       <real_time_update_rate>250</real_time_update_rate>
       <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
     </physics>
-
-    <!-- Bounding box with sea surface -->
-    <include>
-      <uri>model://ocean</uri>
-      <pose>0 0 0 0 0 0</pose>
-    </include>
-    <include>
-      <uri>model://main_boat</uri>
-      <pose>0 0 0 0 0 0</pose>
-    </include>
-    <include>
-      <uri>model://main_drone</uri>
-      <pose>0 0 1.27 0 0 0</pose>
-    </include>
   </world>
 </sdf>

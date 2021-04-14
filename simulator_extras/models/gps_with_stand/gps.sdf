@@ -32,23 +32,6 @@
           </mesh>
         </geometry>
       </visual>
-      <collision name="gps_collison">
-        <pose>0 0 0.08 0 0 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.16</length>
-            <radius>0.015</radius>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
       <gravity>1</gravity>
       <velocity_decay/>
       <sensor name="gps" type="gps">
