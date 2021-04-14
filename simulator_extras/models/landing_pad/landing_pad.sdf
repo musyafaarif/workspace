@@ -34,83 +34,21 @@
             </ode>
           </contact>
           <friction>
-            <mu1>1</mu1>
-            <mu2>1</mu2>
-            <ode/>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+            </ode>
           </friction>
         </surface>
       </collision>
       <visual name='visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 0 1.57</pose>
         <geometry>
-          <box>
-            <size>1 1 0.01</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://landing_pad/meshes/landing_pad.dae</uri>
+          </mesh>
         </geometry>
-        <material>
-          <lighting>1</lighting>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Orange</name>
-          </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
-          <!-- <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-          <emissive>0 0 0 1</emissive> -->
-        </material>
-        <transparency>0</transparency>
-        <cast_shadows>1</cast_shadows>
-      </visual>
-      <visual name='ModelPreview_0::link::visual_1'>
-        <pose frame=''>0 0 0.01 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.2 0.9 0.01</size>
-          </box>
-        </geometry>
-        <material>
-          <lighting>1</lighting>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/White</name>
-          </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
-          <!-- <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-          <emissive>0 0 0 1</emissive> -->
-        </material>
-        <transparency>0</transparency>
-        <cast_shadows>1</cast_shadows>
-      </visual>
-      <visual name='ModelPreview_0::link::visual_2'>
-        <pose frame=''>0 0 0.01 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.9 0.2 0.01</size>
-          </box>
-        </geometry>
-        <material>
-          <lighting>1</lighting>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/White</name>
-          </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
-          <!-- <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-          <emissive>0 0 0 1</emissive> -->
-        </material>
-        <transparency>0</transparency>
-        <cast_shadows>1</cast_shadows>
       </visual>
     </link>
     <static>0</static>
