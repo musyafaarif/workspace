@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Drone -->
+    <include file="$(find px4)/launch/px4.launch">
+        <arg name="vehicle" value="tarot_680"/>
+        <arg name="ID" value="0"/>
+        <arg name="interactive" value="false"/>
+    </include>
+    <include file="$(find mavros)/launch/px4.launch">
+        <arg name="node_name" value="drone_mavros"/>
+        <arg name="fcu_url" value="udp://:14540@localhost:14580"/>
+        <arg name="gcs_url" value=""/>
+        <arg name="tgt_system" value="1"/>
+        <arg name="tgt_component" value="1"/>
+    </include>
+    <!-- Boat -->
+    <include file="$(find px4)/launch/px4.launch">
+        <arg name="vehicle" value="boat"/>
+        <arg name="ID" value="1"/>
+        <arg name="interactive" value="false"/>
+    </include>
+    <include file="$(find mavros)/launch/px4.launch">
+        <arg name="node_name" value="boat_mavros"/>
+        <arg name="fcu_url" value="udp://:14541@localhost:14580"/>
+        <arg name="gcs_url" value=""/>
+        <arg name="tgt_system" value="2"/>
+        <arg name="tgt_component" value="1"/>
+    </include>
+    <node name="boat_com" pkg="ta_control" type="boat_com" output="screen"/>
+</launch>

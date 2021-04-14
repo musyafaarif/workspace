@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   mavros
   mavros_extras
   mavros_msgs
+  geographic_msgs
   roscpp
   sensor_msgs
   std_msgs
@@ -159,14 +160,25 @@ target_link_libraries(testing
   ${catkin_LIBRARIES}
 )
 
-add_executable(simple_takeoff
-  src/simple_takeoff.cpp
+add_executable(drone_takeoff
+  src/drone_takeoff.cpp
 )
-add_dependencies(simple_takeoff
+add_dependencies(drone_takeoff
   ${${PROJECT_NAME}_EXPORTED_TARGETS}
   ${catkin_EXPORTED_TARGETS}
 )
-target_link_libraries(simple_takeoff
+target_link_libraries(drone_takeoff
+  ${catkin_LIBRARIES}
+)
+
+add_executable(drone_follow
+  src/drone_follow.cpp
+)
+add_dependencies(drone_follow
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+  ${catkin_EXPORTED_TARGETS}
+)
+target_link_libraries(drone_follow
   ${catkin_LIBRARIES}
 )
 
@@ -178,6 +190,17 @@ add_dependencies(boat_nav
   ${catkin_EXPORTED_TARGETS}
 )
 target_link_libraries(boat_nav
+  ${catkin_LIBRARIES}
+)
+
+add_executable(boat_com
+  src/boat_com.cpp
+)
+add_dependencies(boat_com
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+  ${catkin_EXPORTED_TARGETS}
+)
+target_link_libraries(boat_com
   ${catkin_LIBRARIES}
 )
 
@@ -222,6 +245,9 @@ target_link_libraries(boat_nav
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
 
 #############
 ## Testing ##
