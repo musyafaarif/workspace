@@ -11,14 +11,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Added
-
 ### Changed
-
 ### Fixed
-- **Fixing Gazebo Configuration**
-  - Boat Model
-  - World Model
-
 
 ## [Week 14] - 2021-06-08
 ## [Week 13] - 2021-06-01
@@ -37,6 +31,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - **Fixing Gazebo Configuration**
+  - Boat Model
+  - World Model
   - Hexacopter Model
   - World Map Coordinate
 
