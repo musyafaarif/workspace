@@ -170,6 +170,17 @@ target_link_libraries(simple_takeoff
   ${catkin_LIBRARIES}
 )
 
+add_executable(boat_nav
+  src/boat_nav.cpp
+)
+add_dependencies(boat_nav
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+  ${catkin_EXPORTED_TARGETS}
+)
+target_link_libraries(boat_nav
+  ${catkin_LIBRARIES}
+)
+
 #############
 ## Install ##
 #############

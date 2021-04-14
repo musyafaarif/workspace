@@ -9,6 +9,6 @@ if [[ "$world_name" == "" ]]; then
     world_name="ocean"
 fi
 
-world_name="worlds/$world_name.world"
-# gazebo --verbose "./simulator_extras/worlds/$world_name.world"
-roslaunch gazebo_ros empty_world.launch verbose:=true world_name:="$world_name"
+world_name="$world_name.world"
+# gazebo --verbose "./simulator_extras/worlds/$world_name"
+roslaunch gazebo_ros empty_world.launch verbose:=true world_name:="worlds/$world_name"
