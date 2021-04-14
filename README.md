@@ -12,7 +12,6 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 ### Added
 - **Fixing Gazebo Configuration**
-  - Wind Simulation
   - ROS Wrapper
   - Boat Movement
   - Boat Communication
@@ -33,6 +32,10 @@ All notable changes to this project will be documented in this file.
 ## [Week 9] - 2021-05-04
 ## [Week 8] - 2021-04-27
 ## [Week 7] - 2021-04-20
+### Added
+- **Fixing Gazebo Configuration**
+  - Wind Simulation
+
 ### Fixed
 - **Fixing Gazebo Configuration**
   - Hexacopter Model
