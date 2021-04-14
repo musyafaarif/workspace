@@ -14,4 +14,9 @@ export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:"$DIR/simulator/models":"$DIR/simu
 # Set path to sitl_gazebo repository
 export SITL_GAZEBO_PATH="$DIR/simulator":"$DIR/simulator_extras"
 
+# Kenjeran
+export PX4_HOME_LAT=-7.2297
+export PX4_HOME_LON=112.8298
+export PX4_HOME_ALT=1.5         # Boat height: 1.5m
+
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$DIR/firmware
