@@ -5,6 +5,28 @@ Software untuk penyelesaian Tugas Akhir dari Musyafa Arif Huda
 ### Keyword
 Hexacopter, Vision, Localization, Robot Operating System (ROS)
 
+## Installing
+### Cloning Repository
+#### Installing Git
+Sebelum kita "clone" suatu repository, terdapat suatu software yang dibutuhkan, yaitu [git](https://git-scm.com/)
+```bash
+sudo apt install git
+```
+#### Clone Menggunakan HTTPS
+```bash
+git clone --recurse-submodules https://github.com/musyafaarif/workspace.git workspace
+```
+"workspace" merupakan folder yang akan dituju untuk mengunduh repository. Kita dapat mengganti workspace dengan nama lain
+
+### Workspace auto-install
+Untuk menginstall seluruh dependancies yang dibutuhkan workspace, masuk dulu ke folder workspace,
+```bash
+cd workspace
+```
+kemudian install dengan perintah
+```bash
+source install.sh
+```
 
 # Change Log
 All notable changes to this project will be documented in this file.
