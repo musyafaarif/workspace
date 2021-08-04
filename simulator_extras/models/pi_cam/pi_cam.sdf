@@ -34,7 +34,7 @@
       </collision>
       <sensor name='camera' type='camera'>
           <camera name='__default__'>
-            <horizontal_fov>1.047</horizontal_fov>
+            <horizontal_fov>1.085595</horizontal_fov>
             <image>
               <width>320</width>
               <height>240</height>

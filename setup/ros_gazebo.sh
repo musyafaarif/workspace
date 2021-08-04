@@ -41,7 +41,7 @@ eval $rossource
 
 # MAVROS: https://dev.px4.io/en/ros/mavros_installation.html
 ## Install dependencies
-sudo apt-get install python-catkin-tools python-rosinstall-generator -y
+sudo apt-get install python-catkin-tools python-rosinstall-generator python-roslaunch -y
 
 ## Create catkin workspace
 cd catkin_ws

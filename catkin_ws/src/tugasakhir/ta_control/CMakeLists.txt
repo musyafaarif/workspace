@@ -16,10 +16,14 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
   std_msgs
+  pid
+  message_generation
+  # cmake_modules
 )
 
 ## System dependencies are found with CMake's conventions
 find_package(Boost REQUIRED COMPONENTS system)
+# find_package(Eigen REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -52,11 +56,12 @@ find_package(Boost REQUIRED COMPONENTS system)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  Navigation.msg
+  # Message1.msg
+  # Message2.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -73,10 +78,13 @@ find_package(Boost REQUIRED COMPONENTS system)
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   geometry_msgs#   mavros_msgs#   sensor_msgs#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  geometry_msgs
+  mavros_msgs
+  sensor_msgs
+  std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -112,6 +120,8 @@ catkin_package(
 #  LIBRARIES ta_control
 #  CATKIN_DEPENDS geometry_msgs mavros mavros_extras mavros_msgs roscpp sensor_msgs std_msgs
 #  DEPENDS system_lib
+  CATKIN_DEPENDS message_runtime
+  # DEPENDS Eigen
 )
 
 ###########
@@ -123,6 +133,7 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
+  # ${Eigen_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -180,6 +191,7 @@ add_dependencies(drone_follow
 )
 target_link_libraries(drone_follow
   ${catkin_LIBRARIES}
+  # ${Eigen_LIBRARIES}
 )
 
 add_executable(boat_nav
@@ -190,17 +202,6 @@ add_dependencies(boat_nav
   ${catkin_EXPORTED_TARGETS}
 )
 target_link_libraries(boat_nav
-  ${catkin_LIBRARIES}
-)
-
-add_executable(boat_com
-  src/boat_com.cpp
-)
-add_dependencies(boat_com
-  ${${PROJECT_NAME}_EXPORTED_TARGETS}
-  ${catkin_EXPORTED_TARGETS}
-)
-target_link_libraries(boat_com
   ${catkin_LIBRARIES}
 )
 

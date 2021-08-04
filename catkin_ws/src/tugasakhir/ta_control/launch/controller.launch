@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<launch>
+      <arg name="tuning" default="false"/>
+      <!-- <rosparam command="load" file="$(find ta_control)/launch/params.yaml" /> -->
+
+      <node name="controller" pkg="pid" type="controller" ns="controller_x">
+            <param name="Kp" value="2.0" />
+            <!-- <param name="Ki" value="0.3" /> -->
+            <param name="Ki" value="0.3" />
+            <!-- <param name="Kd" value="0.002" /> -->
+            <param name="Kd" value="0.5" />
+            <param name="upper_limit" value="3" />
+            <param name="lower_limit" value="-3" />
+            <param name="windup_limit" value="5" />
+            <param name="cutoff_frequency" value="5" />
+      </node>
+      <node name="controller" pkg="pid" type="controller" ns="controller_y">
+            <param name="Kp" value="2.0" />
+            <!-- <param name="Ki" value="0.3" /> -->
+            <param name="Ki" value="0.3" />
+            <!-- <param name="Kd" value="0.002" /> -->
+            <param name="Kd" value="0.5" />
+            <param name="upper_limit" value="3" />
+            <param name="lower_limit" value="-3" />
+            <param name="windup_limit" value="5" />
+            <param name="cutoff_frequency" value="5" />
+      </node>
+      <node name="controller" pkg="pid" type="controller" ns="controller_z">
+            <param name="Kp" value="2.0" />
+            <param name="Ki" value="0.00001" />
+            <param name="Kd" value="0.0" />
+            <param name="cutoff_frequency" value="5" />
+      </node>
+      <node name="controller" pkg="pid" type="controller" ns="controller_yaw">
+            <param name="Kp" value="-0.05" />
+            <param name="Ki" value="0.0" />
+            <param name="Kd" value="0.0" />
+            <param name="angle_error" value="true" />
+            <param name="angle_wrap" value="360.0" />
+      </node>
+
+      <!-- <node name="controller_z_plot" pkg="rqt_plot" type="rqt_plot"
+            args="/controller_z/control_effort/data /controller_z/state/data /controller_z/setpoint/data" /> -->
+      <group if="$(arg tuning)">
+            <node name="controller_x_plot" pkg="rqt_plot" type="rqt_plot"
+                  args="/controller_x/control_effort/data /controller_x/state/data /controller_x/setpoint/data" />
+            <node name="controller_y_plot" pkg="rqt_plot" type="rqt_plot"
+                  args="/controller_y/control_effort/data /controller_y/state/data /controller_y/setpoint/data" />
+            <node name="controller_z_plot" pkg="rqt_plot" type="rqt_plot"
+                  args="/controller_z/control_effort/data /controller_z/state/data /controller_z/setpoint/data" />
+            <node name="controller_yaw_plot" pkg="rqt_plot" type="rqt_plot"
+                  args="/controller_yaw/control_effort/data /controller_yaw/state/data /controller_yaw/setpoint/data" />
+            <node name="rqt_reconfigure" pkg="rqt_reconfigure" type="rqt_reconfigure" />
+      </group>
+</launch>

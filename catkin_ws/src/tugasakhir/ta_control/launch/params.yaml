@@ -1,0 +1,51 @@
+controller_x:
+  Kp: 0.0
+  Kp_scale: 1.0
+  Ki: 0.0
+  Ki_scale: 0.1
+  Kd: 0.0
+  Kd_scale: 1.0
+  upper_limit: 10
+  lower_limit: -10
+  windup_limit: 10
+  max_loop_frequency: 100.0
+  min_loop_frequency: 100.0
+
+controller_y:
+  Kp: 0.0
+  Kp_scale: 1.0
+  Ki: 0.0
+  Ki_scale: 0.1
+  Kd: 0.0
+  Kd_scale: 1.0
+  upper_limit: 10
+  lower_limit: -10
+  windup_limit: 10
+  max_loop_frequency: 100.0
+  min_loop_frequency: 100.0
+
+controller_z:
+  Kp: 0.0
+  Kp_scale: 1.0
+  Ki: 0.0
+  Ki_scale: 0.1
+  Kd: 0.0
+  Kd_scale: 1.0
+  upper_limit: 10
+  lower_limit: -10
+  windup_limit: 10
+  max_loop_frequency: 100.0
+  min_loop_frequency: 100.0
+
+controller_yaw:
+  Kp: 0.0
+  Kp_scale: 1.0
+  Ki: 0.0
+  Ki_scale: 0.1
+  Kd: 0.0
+  Kd_scale: 1.0
+  upper_limit: 10
+  lower_limit: -10
+  windup_limit: 10
+  max_loop_frequency: 100.0
+  min_loop_frequency: 100.0

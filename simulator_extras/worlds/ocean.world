@@ -61,18 +61,18 @@
       <pose>0 0 1.27 0 0 0</pose>
     </include>
     
-    <plugin name='wind_plugin' filename='libgazebo_wind_plugin.so'>
+    <!-- <plugin name='wind_plugin' filename='libgazebo_wind_plugin.so'>
       <frameId>base_link</frameId>
       <robotNamespace/>
       <xyzOffset>1 0 0</xyzOffset>
       <windDirectionMean>0 1 0</windDirectionMean>
-      <windDirectionVariance>0.01</windDirectionVariance>
+      <windDirectionVariance>0.01</windDirectionVariance> -->
       <!-- From Wind Speed at 50m -->
-      <windVelocityMean>4.0</windVelocityMean>
+      <!-- <windVelocityMean>4.0</windVelocityMean>
       <windVelocityMax>5.25</windVelocityMax>
       <windVelocityVariance>4.0</windVelocityVariance>
       <windPubTopic>world_wind</windPubTopic>
-    </plugin>
+    </plugin> -->
 
     <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>

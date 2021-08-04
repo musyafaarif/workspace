@@ -167,6 +167,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   scripts/test.py
   scripts/color_detection.py
+  scripts/tuning_manual.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

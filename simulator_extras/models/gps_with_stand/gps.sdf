@@ -41,11 +41,11 @@
           <update_rate>5.0</update_rate>
           <gpsNoise>1</gpsNoise>
           <gpsXYRandomWalk>2.0</gpsXYRandomWalk>
-          <gpsZRandomWalk>4.0</gpsZRandomWalk>
-          <gpsXYNoiseDensity>2.0e-4</gpsXYNoiseDensity>
-          <gpsZNoiseDensity>4.0e-4</gpsZNoiseDensity>
-          <gpsVXYNoiseDensity>0.2</gpsVXYNoiseDensity>
-          <gpsVZNoiseDensity>0.4</gpsVZNoiseDensity>
+          <gpsZRandomWalk>0.0</gpsZRandomWalk>
+          <gpsXYNoiseDensity>2.0</gpsXYNoiseDensity>
+          <gpsZNoiseDensity>0.0</gpsZNoiseDensity>
+          <gpsVXYNoiseDensity>2.0</gpsVXYNoiseDensity>
+          <gpsVZNoiseDensity>0.0</gpsVZNoiseDensity>
         </plugin>
       </sensor>
     </link>

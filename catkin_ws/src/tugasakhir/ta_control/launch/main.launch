@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find ta_control)/launch/controller.launch">
+        <arg name="tuning" value="false"/>
+    </include>
+    <node name="drone_control" pkg="ta_control" type="drone_follow" output="screen"/>
+    <node name="drone_vision" pkg="ta_vision" type="color_detection.py" output="screen"/>
+</launch>

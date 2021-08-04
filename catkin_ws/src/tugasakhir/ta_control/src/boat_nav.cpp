@@ -27,7 +27,7 @@ int main(int argc, char **argv)
             ("boat_mavros/set_mode");
 
     //the setpoint publishing rate MUST be faster than 2Hz
-    ros::Rate rate(20.0);
+    ros::Rate rate(5.0);
 
     // wait for FCU connection
     ROS_INFO("Wait for Connection..");
@@ -84,7 +84,7 @@ int main(int argc, char **argv)
             }
         }
 
-        if (ros::Time::now() - last_course > ros::Duration(60.0)) {
+        if (ros::Time::now() - last_course > ros::Duration(90.0)) {
             course = (course + 1) % 4;
             tgt.velocity.x = 15.0f * sin(course * M_PI / 2.0f);
             tgt.velocity.y = 15.0f * cos(course * M_PI / 2.0f);

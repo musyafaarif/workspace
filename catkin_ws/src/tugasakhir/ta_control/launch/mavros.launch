@@ -26,5 +26,4 @@
         <arg name="tgt_system" value="2"/>
         <arg name="tgt_component" value="1"/>
     </include>
-    <node name="boat_com" pkg="ta_control" type="boat_com" output="screen"/>
 </launch>

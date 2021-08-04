@@ -7,6 +7,18 @@
         <pose>0 0 0 0 0 0</pose>
         <mass>2.87</mass>
         <inertia>
+          <ixx>0.05319</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.06388</iyy>
+          <iyz>0</iyz>
+          <izz>0.02562</izz>
+        </inertia>
+      </inertial>
+      <!-- <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>2.87</mass>
+        <inertia>
           <ixx>0.5319</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
@@ -14,7 +26,7 @@
           <iyz>0</iyz>
           <izz>0.2562</izz>
         </inertia>
-      </inertial>
+      </inertial> -->
       <collision name='base_link_inertia_collision'>
         <pose>0 0 0.14 0 0 0</pose>
         <geometry>
