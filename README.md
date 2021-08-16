@@ -28,6 +28,38 @@ kemudian install dengan perintah
 source install.sh
 ```
 
+## Running
+Sebelum menjalankan keseluruhan simulasi, pastikan seluruh library dan program yang dibutuhkan telah diinstall dengan sempurna,
+jika sudah diinstall dengan sempurna, maka untuk setiap perintah yang akan dijalankan, lakukan langkah berikut untuk memastikan
+bahwa library telah masuk ke pengaturan.
+Langkahnya adalah dengan terminal yang telah terbuka, masuk ke dalam folder workspace, kemudian jalankan
+```bash
+source setup.bash
+```
+
+### Running Simulator (Gazebo + ROS)
+Untuk menjalankan simulator, buka terminal dengan langkah yang telah dijelaskan sebelumnya, kemudian jalankan
+```bash
+source run_sim.sh
+```
+Maka simulator gazebo akan berjalan, setelah itu jalankan PX4 ROS Wrapper untuk Gazebo dengan menjalankan
+```bash
+roslaunch ta_control mavros.launch
+```
+
+### Running Boat Control
+Untuk menggerakkan kapal agar dapat bergerak, buka terminal dengan langkah yang telah dijelaskan sebelumnya, kemudian jalankan
+```bash
+rosrun ta_control boat_nav
+```
+
+### Running Hexacopter Control
+Untuk menggerakkan hexacopter dengan sistem kontrol yang telah dibuat, buka terminal dengan langkah yang telah dijelaskan sebelumnya,
+kemudian jalankan
+```bash
+roslaunch ta_control main.launch
+```
+
 # Change Log
 All notable changes to this project will be documented in this file.
 
